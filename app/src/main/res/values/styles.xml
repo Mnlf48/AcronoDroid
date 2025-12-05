@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- AppBar Title Style -->
+    <style name="AppBarTitle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:letterSpacing">0.01</item>
+    </style>
+
+    <!-- Search Bar Style -->
+    <style name="SearchBarStyle" parent="Widget.Material3.SearchBar">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColorHint">@color/text_hint</item>
+        <item name="backgroundTint">@color/background_gray</item>
+        <item name="elevation">0dp</item>
+    </style>
+
+    <!-- Category Chip Style -->
+    <style name="CategoryChipStyle" parent="Widget.Material3.Chip.Filter">
+        <item name="chipBackgroundColor">@color/chip_background</item>
+        <item name="chipStrokeColor">@color/chip_stroke</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="android:textColor">@color/violet_primary</item>
+        <item name="chipCornerRadius">16dp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">14sp</item>
+        <item name="checkedIconTint">@color/violet_primary</item>
+    </style>
+
+    <!-- Acronym Title Style -->
+    <style name="AcronymTitleStyle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/violet_primary</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:letterSpacing">0.02</item>
+    </style>
+
+    <!-- Acronym Full Name Style -->
+    <style name="AcronymFullNameStyle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <!-- Category Badge Style -->
+    <style name="CategoryBadgeStyle">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/violet_accent</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:background">@color/chip_background</item>
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:paddingEnd">8dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+    </style>
+
+    <!-- Detail Section Title Style -->
+    <style name="DetailSectionTitleStyle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.05</item>
+    </style>
+
+    <!-- Detail Content Style -->
+    <style name="DetailContentStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:lineSpacingExtra">4dp</item>
+    </style>
+
+    <!-- Folder Title Style -->
+    <style name="FolderTitleStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <!-- Folder Count Style -->
+    <style name="FolderCountStyle">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <!-- Dialog Title Style -->
+    <style name="DialogTitleStyle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <!-- Button Text Style -->
+    <style name="ButtonTextStyle" parent="Widget.Material3.Button">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:letterSpacing">0.03</item>
+        <item name="backgroundTint">@color/violet_primary</item>
+    </style>
+
+    <!-- Text Button Style -->
+    <style name="TextButtonStyle" parent="Widget.Material3.Button.TextButton">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">@color/violet_primary</item>
+    </style>
+
+</resources>

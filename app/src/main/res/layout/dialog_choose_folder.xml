@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <!-- Dialog Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:paddingBottom="16dp">
+
+        <!-- Dialog Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/save_to_folder"
+            style="@style/DialogTitleStyle" />
+
+        <!-- Subtitle -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/choose_folder_subtitle"
+            android:textSize="14sp"
+            android:textColor="@color/text_secondary"
+            android:fontFamily="sans-serif" />
+
+    </LinearLayout>
+
+    <!-- Folders List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewFolders"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxHeight="300dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp"
+        android:clipToPadding="false"
+        tools:itemCount="3"
+        tools:listitem="@layout/item_folder_choice" />
+
+    <!-- Create New Folder Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCreateNewFolder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/create_new_folder"
+        android:textColor="@color/violet_primary"
+        app:icon="@drawable/ic_add"
+        app:iconTint="@color/violet_primary"
+        app:iconGravity="start"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        app:strokeColor="@color/violet_primary"
+        app:cornerRadius="8dp" />
+
+    <!-- Cancel Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/cancel"
+        style="@style/TextButtonStyle" />
+
+</LinearLayout>

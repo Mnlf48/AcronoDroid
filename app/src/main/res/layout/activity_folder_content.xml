@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_light"
+    tools:context=".FolderContentActivity">
+
+    <!-- App Bar Layout -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:elevation="0dp">
+
+        <!-- Toolbar -->
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            app:titleTextAppearance="@style/AppBarTitle"
+            app:navigationIcon="@drawable/ic_back"
+            app:navigationIconTint="@color/text_primary">
+
+            <!-- More Options Button -->
+            <ImageButton
+                android:id="@+id/btnMoreOptions"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/more_options"
+                android:src="@drawable/ic_more_vert"
+                app:tint="@color/text_primary" />
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+        <!-- Folder Info Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/tvFolderName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Web Development"
+                android:textSize="20sp"
+                android:textColor="@color/violet_primary"
+                android:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:id="@+id/tvItemCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="12 acronyms"
+                style="@style/FolderCountStyle" />
+
+        </LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Acronyms List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewAcronyms"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="16dp"
+        android:clipToPadding="false"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:listitem="@layout/item_acronym" />
+
+    <!-- Empty State -->
+    <LinearLayout
+        android:id="@+id/emptyStateLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/ic_folder_empty"
+            android:alpha="0.3"
+            app:tint="@color/text_hint"
+            android:contentDescription="@string/empty_folder" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/folder_is_empty"
+            android:textSize="16sp"
+            android:textColor="@color/text_secondary"
+            android:fontFamily="sans-serif" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/bookmark_acronyms_hint"
+            android:textSize="14sp"
+            android:textColor="@color/text_hint"
+            android:fontFamily="sans-serif"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

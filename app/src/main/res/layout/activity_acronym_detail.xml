@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_light"
+    tools:context=".AcronymDetailActivity">
+
+    <!-- App Bar Layout -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:elevation="0dp">
+
+        <!-- Toolbar -->
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            app:navigationIcon="@drawable/ic_back"
+            app:navigationIconTint="@color/text_primary">
+
+            <!-- Bookmark Icon Button -->
+            <ImageButton
+                android:id="@+id/btnBookmark"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/bookmark"
+                android:src="@drawable/ic_bookmark_border"
+                app:tint="@color/violet_primary" />
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Scrollable Content -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- Acronym Title -->
+            <TextView
+                android:id="@+id/tvAcronymTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="API"
+                android:textSize="32sp"
+                android:textColor="@color/violet_primary"
+                android:fontFamily="sans-serif-medium"
+                android:letterSpacing="0.02" />
+
+            <!-- Full Name -->
+            <TextView
+                android:id="@+id/tvFullName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Application Programming Interface"
+                android:textSize="18sp"
+                android:textColor="@color/text_secondary"
+                android:fontFamily="sans-serif" />
+
+            <!-- Category Badge -->
+            <TextView
+                android:id="@+id/tvCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Web"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:background="@drawable/bg_category_badge"
+                style="@style/CategoryBadgeStyle" />
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:background="@color/divider" />
+
+            <!-- Definition Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/definition"
+                style="@style/DetailSectionTitleStyle" />
+
+            <TextView
+                android:id="@+id/tvDefinition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="A set of rules and protocols that allows different software applications to communicate with each other. APIs define the methods and data structures that developers can use to interact with external software components, services, or operating systems."
+                style="@style/DetailContentStyle" />
+
+            <!-- Example Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/example_usage"
+                style="@style/DetailSectionTitleStyle" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/border_light"
+                app:cardBackgroundColor="@color/background_gray">
+
+                <TextView
+                    android:id="@+id/tvExample"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:text="&quot;We use the REST API to fetch user data from the server.&quot;"
+                    android:textSize="15sp"
+                    android:textColor="@color/text_primary"
+                    android:fontFamily="sans-serif"
+                    android:lineSpacingExtra="4dp"
+                    android:textStyle="italic" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Usage Context Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/usage_context"
+                style="@style/DetailSectionTitleStyle" />
+
+            <TextView
+                android:id="@+id/tvUsageContext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Commonly used in web development, mobile app development, and software integration. Essential for connecting frontend applications to backend services."
+                style="@style/DetailContentStyle" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
